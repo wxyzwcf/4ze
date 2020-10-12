@@ -1,9 +1,11 @@
+from memory_profiler import profile
+
 from generator import Ari_Expression
 from infixTosuffix import infix_to_suffix
 import Calculate
 from optparse import OptionParser
 
-
+@profile
 def main():
     parser = OptionParser()
     parser.add_option("-n", action="store", type="int", dest="problem", default='10', help='题目个数')
